@@ -1,0 +1,12 @@
+.container {
+    width: $default-width;
+    margin: 0 auto;
+
+    main & {
+        padding-top: 60px;
+    }
+}
+
+.page-wrapper {
+    display: flex;
+}
