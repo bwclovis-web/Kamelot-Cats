@@ -18,6 +18,14 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Amaranth:700', 'Open Sans:400,600']
+        }
+      }
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
