@@ -1,9 +1,10 @@
 .container {
-    width: $default-width;
+    width: 60vw;
     margin: 0 auto;
+    padding: 120px 60px;
 
     main & {
-        padding-top: 60px;
+        padding-top: 120px;
     }
 }
 
