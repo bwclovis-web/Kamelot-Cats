@@ -1,3 +1,18 @@
 p, a {
     font-size: 1.6rem;
 }
+
+.heading {
+    font-family: $font-heading;
+
+    &-h1 {
+        font-size: 4.8rem;
+    }
+}
+
+.subheading {
+    &-h2 {
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+}
