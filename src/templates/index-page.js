@@ -27,20 +27,7 @@ export const IndexPageTemplate = ({
       </div>
     </div>
     <section className="section section--gradient">
-
-      <div className="content">
-        <div className="tile">
-          <h2 className="title">{mainpitch.title}</h2>
-        </div>
-        <div className="tile">
-          <h3 className="subtitle">{mainpitch.description}</h3>
-        </div>
-      </div>
-      
         <div className="column is-12">
-          <h3 className="has-text-weight-semibold is-size-2">
-            {heading}
-          </h3>
           <p>{description}</p>
         </div>
       
@@ -70,7 +57,6 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
@@ -87,7 +73,6 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
