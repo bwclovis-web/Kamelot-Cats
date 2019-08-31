@@ -36,5 +36,9 @@ p, a, label {
 }
 
 .description {
-    padding: 0 120px 60px 0;
+    padding: 0 0 60px 0;
+
+    @include for-tablet-landscape-up {
+        padding: 0 120px 60px 0;
+    }
 }

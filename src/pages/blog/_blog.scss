@@ -1,6 +1,8 @@
 .blog {
-    width: $default-width;
-    margin: 0 auto 0 40vw;
+    @include for-tablet-landscape-up {
+        width: $default-width;
+        margin: 0 auto 0 40vw;
+    }
 
     &-content {
         h2 {
@@ -63,7 +65,11 @@
         z-index: 4;
         background-color: rgba($color-black, 0.8);
         padding: 20px 60px;
-        width: $default-width;
+        width: 100%;
+        
+        @include for-tablet-landscape-up {
+            width: $default-width;
+        }
 
         & + div {
             p + p,
