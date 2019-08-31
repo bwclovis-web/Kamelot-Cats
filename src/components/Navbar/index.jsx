@@ -38,13 +38,13 @@ const Navbar = class extends React.Component {
         <div className="navbar-inner">
           <div className="navbar-logo">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi"/>
+              <img src={logo} alt="Kamelot Cats Logo"/>
             </Link>
           </div>
           <ul className="navbar-list">
             <li className="navbar-list_item">
-              <Link className="navbar-anchor" activeClassName="_active" to="/about">
-                About
+              <Link className="navbar-anchor" activeClassName="_active" to="/cats">
+                The Cats
               </Link>
             </li>
             <li className="navbar-list_item">
@@ -53,8 +53,8 @@ const Navbar = class extends React.Component {
               </Link>
             </li>
             <li className="navbar-list_item">
-              <Link className="navbar-anchor" activeClassName="_active" to="/contact/examples">
-                Form Examples
+              <Link className="navbar-anchor" activeClassName="_active" to="/contact">
+                Contact Me
               </Link>
             </li>
           </ul>
