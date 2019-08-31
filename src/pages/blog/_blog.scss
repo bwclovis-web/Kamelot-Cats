@@ -1,5 +1,5 @@
 .blog {
-    width: 59.1vw;
+    width: $default-width;
     margin: 0 auto 0 40vw;
 
     &-content {
@@ -14,11 +14,13 @@
         
         &_list {
             display: flex;
+            flex-wrap: wrap;
+            align-items: center;
         }
 
         &_item {
-            padding: 0 10px 0 5px;
-            display: inherit;
+            padding: 0 10px 20px 5px;
+            display: flex;
 
             &:after {
                 content: '';
@@ -46,6 +48,12 @@
                 color: $color-aqua;
                 box-shadow: 0 4px 0px -2px $color-aqua;
             }
+
+            &._small {
+                padding-top: 40px;
+                font-size: 1.4rem;
+                float: right;
+            }
         }
 
     }
@@ -55,6 +63,7 @@
         z-index: 4;
         background-color: rgba($color-black, 0.8);
         padding: 20px 60px;
+        width: $default-width;
 
         & + div {
             p + p,

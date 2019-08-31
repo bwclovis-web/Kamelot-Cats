@@ -7,9 +7,9 @@ class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
     const postLinks = posts.map(post => (
-      <li key={post.node.fields.slug}>
-        <Link to={post.node.fields.slug}>
-          <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
+      <li key={post.node.fields.slug} className="blog-taglist_item" >
+        <Link to={post.node.fields.slug} className="blog-taglist_tag">
+          <p className="subheading-h3">{post.node.frontmatter.title}</p>
         </Link>
       </li>
     ))
@@ -22,22 +22,15 @@ class TagRoute extends React.Component {
 
     return (
       <Layout>
-        <section className="section">
-          <Helmet title={`${tag} | ${title}`} />
-          <div className="container content">
-            <div className="columns">
-              <div
-                className="column is-10 is-offset-1"
-                style={{ marginBottom: '6rem' }}
-              >
-                <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
-                <ul className="taglist">{postLinks}</ul>
-                <p>
-                  <Link to="/tags/">Browse all tags</Link>
-                </p>
-              </div>
+        <section className="container">
+          <Helmet title={`${tag.toUpperCase()} | ${title}`} />
+            <div className="heading-container">
+              <h1 className="heading heading-h1">{tagHeader}</h1>
             </div>
-          </div>
+            <ul className="blog-taglist_list">{postLinks}</ul>
+            <p>
+              <Link to="/tags/" className="blog-taglist_tag _small">Browse all tags</Link>
+            </p>
         </section>
       </Layout>
     )

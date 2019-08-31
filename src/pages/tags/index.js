@@ -13,27 +13,18 @@ const TagsPage = ({
   },
 }) => (
   <Layout>
-    <section className="section">
+    <section className="container">
       <Helmet title={`Tags | ${title}`} />
-      <div className="container content">
-        <div className="columns">
-          <div
-            className="column is-10 is-offset-1"
-            style={{ marginBottom: '6rem' }}
-          >
-            <h1 className="title is-size-2 is-bold-light">Tags</h1>
-            <ul className="taglist">
-              {group.map(tag => (
-                <li key={tag.fieldValue}>
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                    {tag.fieldValue} ({tag.totalCount})
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
+        <div className="heading-container"><h1 className="heading heading-h1">Tags</h1></div>
+        <ul className="blog-taglist_list">
+          {group.map(tag => (
+            <li key={tag.fieldValue} className="blog-taglist_item">
+              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`} className="blog-taglist_tag">
+                {tag.fieldValue} ({tag.totalCount})
+              </Link>
+            </li>
+          ))}
+        </ul>
     </section>
   </Layout>
 )
