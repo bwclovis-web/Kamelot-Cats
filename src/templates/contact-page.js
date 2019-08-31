@@ -1,21 +1,44 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../components/Layout'
+import {graphql} from 'gatsby'
+import Content, { HTMLContent } from '../components/Content'
 
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
 }
-
+const ContactTop = ({
+  title,
+  content,
+  contentComponent,
+}) => {
+  const PageContent = contentComponent || Content;
+  console.log(content)
+  return (
+    <React.Fragment>
+      <div className="heading-container">
+        <h1 className="heading heading-h1">{title}</h1>
+      </div>
+        <div className="description">
+          <PageContent content={content} />
+        </div>
+    </React.Fragment>
+  )
+}
 export default class Index extends React.Component {
   constructor(props) {
     super(props)
     this.state = { isValidated: false }
   }
-
+  
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value })
+  }
+
+  handleFocus = () => {
+    console.log('to implement')
   }
 
   handleSubmit = e => {
@@ -34,12 +57,18 @@ export default class Index extends React.Component {
   }
 
   render() {
+    const {frontmatter, html} = this.props.data.markdownRemark;
+  
     return (
       <Layout>
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>Contact</h1>
+            <ContactTop
+              title={frontmatter.title}
+              content={html}
+              contentComponent={HTMLContent}
+            />
               <form
                 name="contact"
                 method="post"
@@ -47,6 +76,7 @@ export default class Index extends React.Component {
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
+                className="contact-form"
               >
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                 <input type="hidden" name="form-name" value="contact" />
@@ -56,37 +86,40 @@ export default class Index extends React.Component {
                     <input name="bot-field" onChange={this.handleChange} />
                   </label>
                 </div>
-                <div className="field">
-                  <label className="label" htmlFor={'name'}>
-                    Your name
-                  </label>
-                  <div className="control">
-                    <input
-                      className="input"
-                      type={'text'}
-                      name={'name'}
-                      onChange={this.handleChange}
-                      id={'name'}
-                      required={true}
-                    />
+                <fieldset>
+                  <div className="contact-form_field">
+                    <label className="label" htmlFor={'name'}>
+                      Your name
+                    </label>
+                    <div className="control">
+                      <input
+                        className="input"
+                        type={'text'}
+                        name={'name'}
+                        onChange={this.handleChange}
+                        id={'name'}
+                        required={true}
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="field">
-                  <label className="label" htmlFor={'email'}>
-                    Email
-                  </label>
-                  <div className="control">
-                    <input
-                      className="input"
-                      type={'email'}
-                      name={'email'}
-                      onChange={this.handleChange}
-                      id={'email'}
-                      required={true}
-                    />
+                  <div className="contact-form_field">
+                    <label className="label" htmlFor={'email'}>
+                      Email
+                    </label>
+                    <div className="control">
+                      <input
+                        className="input"
+                        type={'email'}
+                        name={'email'}
+                        onChange={this.handleChange}
+                        id={'email'}
+                        required={true}
+                        onFocus={this.handleFocus}
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="field">
+                </fieldset>
+                <div className="contact-form_field">
                   <label className="label" htmlFor={'message'}>
                     Message
                   </label>
@@ -100,8 +133,8 @@ export default class Index extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="field">
-                  <button className="button is-link" type="submit">
+                <div className="contact-form_field">
+                  <button className="btn btn-std" type="submit">
                     Send
                   </button>
                 </div>
@@ -113,3 +146,13 @@ export default class Index extends React.Component {
     )
   }
 }
+export const pageQuery = graphql`
+  query ContactPageQuery {
+  markdownRemark(frontmatter: {templateKey: {eq: "contact-page"}}) {
+    frontmatter {
+      title
+    }
+    html
+  }
+}
+`
