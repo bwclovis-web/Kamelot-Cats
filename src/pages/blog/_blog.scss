@@ -1,0 +1,95 @@
+.blog {
+    width: 59.1vw;
+    margin: 0 auto 0 40vw;
+
+    &-content {
+        h2 {
+            font-family: $font-heading;
+            font-size: 3.2rem;
+        }
+    }
+
+    &-taglist {
+        padding: 40px 60px;
+        
+        &_list {
+            display: flex;
+        }
+
+        &_item {
+            padding: 0 10px 0 5px;
+            display: inherit;
+
+            &:after {
+                content: '';
+                border-right: 2px solid $color-robins-egg;
+                display: inline-block;
+                padding: 0 5px;
+            }
+
+            &:last-child {
+                padding-right: 0;
+
+                &:after {
+                    border-right: 0;
+                }
+            }
+        }
+
+        &_tag {
+            color: $color-robins-egg;
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+
+            &:hover,
+            &:focus {
+                color: $color-aqua;
+                box-shadow: 0 4px 0px -2px $color-aqua;
+            }
+        }
+
+    }
+
+    &-header {
+        position: absolute;
+        z-index: 4;
+        background-color: rgba($color-black, 0.8);
+        padding: 20px 60px;
+
+        & + div {
+            p + p,
+            h2,
+            h2 + p,
+            ol,
+            ol + p,
+            ul,
+            ul+ p {
+                padding: 10px 60px;
+            }
+
+            h2 {
+                padding-top: 40px;
+            }
+
+            ul,
+            ol {
+                font-size: 1.8rem;
+            }
+
+            a {
+                color: $color-robins-egg;
+
+                &:hover,
+                &:focus {
+                    color: $color-aqua;
+                    box-shadow: 0 4px 0px -2px $color-aqua;
+                }
+            }
+        }
+    }
+
+    .gatsby-resp-image-wrapper {
+        margin-bottom: 60px;
+        border-bottom: 1px solid $color-pacific;
+    }
+}

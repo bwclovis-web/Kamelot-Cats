@@ -21,8 +21,6 @@ class BlogRoll extends React.Component {
                 <header>
                   {post.frontmatter.featuredimage ? (
                     <React.Fragment>
-                      
-
                       <div className="featured-thumbnail">
                           <PreviewCompatibleImage
                             imageInfo={{

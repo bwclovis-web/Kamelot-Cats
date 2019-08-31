@@ -6,6 +6,9 @@
 @import './BlogRoll/blogroll';
 @import './Footer/footer';
 
+//PAGE
+@import '../pages/pages';
+
 .btn {
     color: $color-cyprus;
     text-transform: uppercase;
