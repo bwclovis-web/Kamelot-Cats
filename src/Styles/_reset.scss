@@ -33,14 +33,16 @@ html {
 }
 html,
 body,
-#root,
-main {
+#root{
   height: 100vh;
   font-family: $font-body;
 }
 body {
   background-color: $color-cyprus;
   color: lighten($color-aqua, 30%);
+}
+main {
+	height: 100%;
 }
 ol, ul {
 	list-style: none;
