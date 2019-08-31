@@ -8,8 +8,16 @@
             margin-bottom: 40px;
 
             .contact-form_field {
-                width: 40%;
+                width: 50%;
                 padding-right: 30px;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                @include for-tablet-landscape-up {
+                    width: 40%; 
+                }
 
                 .input {
                     width: 100%;
@@ -32,7 +40,11 @@
         }
 
         &_field {
-            width: 77%;
+            width: 100%;
+
+            @include for-tablet-landscape-up {
+                width: 77%;
+            }
     
             .textarea {
                 width: 100%;

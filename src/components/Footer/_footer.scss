@@ -1,12 +1,16 @@
 .footer {
     display: flex;
-    width: 59.1vw;
     margin: 0 auto;
-    margin-left: 40vw;
     background-color: $color-aqua;
     padding: 30px 20px;
     align-items: end;
-    justify-content: start;
+    justify-content: flex-start;
+
+    @include for-tablet-landscape-up {
+        margin-left: 40vw;
+        width: 59.1vw;
+    }
+    
 
     img {
         width: 100px;

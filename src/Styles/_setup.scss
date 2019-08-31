@@ -1,7 +1,11 @@
 .container {
-    width: $default-width;
-    margin: 0 auto 0 40vw;
-    padding: 120px 60px;
+    padding: 40px;
+
+    @include for-tablet-landscape-up {
+        padding: 120px 60px;
+        margin: 0 auto 0 40vw;
+        width: $default-width;
+    }
 
     main & {
         padding-bottom: 0;
@@ -10,4 +14,9 @@
 
 .page-wrapper {
     display: flex;
+    flex-direction: column;
+
+    @include for-tablet-landscape-up {
+        flex-direction: row;
+    }
 }
