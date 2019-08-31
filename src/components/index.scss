@@ -3,3 +3,19 @@
 @import '../Styles/typography';
 @import '../Styles/setup';
 @import './Navbar/navbar';
+@import './BlogRoll/blogroll';
+
+.btn {
+    color: $color-cyprus;
+    text-transform: uppercase;
+
+    &-link {
+        color: $color-aqua;
+        padding-bottom: 4px;
+
+        &:hover,
+        &:focus {
+            box-shadow: 0px 0px 0px 1px $color-aqua;
+        }
+    }
+}

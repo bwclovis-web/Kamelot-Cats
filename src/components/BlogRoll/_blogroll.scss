@@ -1,0 +1,56 @@
+.blogroll {
+    &-container {
+        align-items: stretch;
+        display: flex;
+        align-content: space-evenly;
+        flex-grow: 2;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    &-article {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba($color-white, 0.1);
+        margin: 0 40px 40px 0;
+        border-radius: $default-radius;
+        border: 1px solid $color-pacific;
+        box-shadow: $default-shadow;
+        position: relative;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        header {
+            .gatsby-image-wrapper {
+                height: 160px;
+            }
+
+            .title {
+                color: $color-aqua;
+                line-height: 1.2;
+            }
+
+            .subtitle {
+                font-size: 1.4rem;
+                font-style: italic;
+            }
+        }
+
+        .post-meta {
+            padding: 20px 12px;
+        }
+
+        .btn {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+        }
+    }
+
+    &-description {
+        padding: 0 12px 20px;
+        margin-bottom: 40px;
+    }
+}

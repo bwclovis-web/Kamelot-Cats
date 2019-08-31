@@ -9,15 +9,13 @@ import BlogRoll from '../components/BlogRoll'
 export const IndexPageTemplate = ({
   image,
   title,
-  heading,
   subheading,
-  mainpitch,
   description,
   intro,
 }) => (
   <div className="container">
     <div>
-      <div>
+      <div className="heading-container">
         <h1 className="heading heading-h1">
           {title}
         </h1>

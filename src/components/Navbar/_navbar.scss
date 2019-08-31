@@ -3,6 +3,8 @@
    width: 40vw;
    display: flex;
    justify-content: center;
+   position: fixed;
+   height: 100%;
 
    &-inner {
        display: flex;

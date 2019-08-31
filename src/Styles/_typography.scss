@@ -5,8 +5,20 @@ p, a {
 .heading {
     font-family: $font-heading;
 
+    &-container {
+        margin-bottom: 26px;
+    }
+
     &-h1 {
         font-size: 4.8rem;
+    }
+
+    &-h2 {
+        font-size: 3.2rem;
+    }
+
+    &-h3 {
+        font-size: 2.4rem;
     }
 }
 
