@@ -21,6 +21,19 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
+  - name: "cats"
+    label: "Cats"
+    folder: "src/pages/cats"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "cat-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Body", name: "body", widget: "markdown"}
+
   - name: "pages"
     label: "Pages"
     files:
