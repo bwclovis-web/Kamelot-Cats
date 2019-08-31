@@ -1,0 +1,59 @@
+.contact {
+    &-form {
+        display: flex;
+        flex-direction: column;
+
+        fieldset {
+            display: flex;
+            margin-bottom: 40px;
+
+            .contact-form_field {
+                width: 40%;
+                padding-right: 30px;
+
+                .input {
+                    width: 100%;
+                    border-radius: $default-radius;
+                    height: 50px;
+                    font-size: 2rem;
+                    padding: 10px 20px;
+                    letter-spacing: 0.17rem;
+                    background-color: transparent;
+                    border: 1px solid $color-lagoon;
+                    color: $color-aqua;
+                    transition: background-color .2s ease-in-out;
+
+                    &:focus,
+                    ._dirty {
+                        background-color: rgba($color-aqua, 0.3);
+                    }
+                }
+            }
+        }
+
+        &_field {
+            width: 77%;
+    
+            .textarea {
+                width: 100%;
+                border-radius: $default-radius;
+                min-height: 300px;
+                background: transparent;
+                border: 1px solid $color-lagoon;
+                color: $color-aqua;
+                outline: 0;
+                box-shadow: none;
+                transition: background-color .2s ease-in-out;
+                font-size: 2rem;
+                padding: 10px 20px;
+                letter-spacing: 0.17rem;
+                font-family: $font-body;
+
+                &:focus,
+                ._dirty {
+                    background-color: rgba($color-aqua, 0.3);
+                }
+            }
+        }
+    }
+}
