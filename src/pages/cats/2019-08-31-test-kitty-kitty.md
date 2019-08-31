@@ -1,5 +1,5 @@
 ---
-templateKey: cat-post
+templateKey: cat-page
 title: TEST KITTY KITTY
 date: 2019-08-31T16:03:46.136Z
 description: TEST KITTY
