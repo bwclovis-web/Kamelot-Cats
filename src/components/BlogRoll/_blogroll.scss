@@ -18,6 +18,14 @@
         box-shadow: $default-shadow;
         position: relative;
         margin-bottom: 30px;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all .2s ease-in-out;
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(0px);
+        }
 
         @include for-desktop-up {
             margin: 0 40px 40px 0;
