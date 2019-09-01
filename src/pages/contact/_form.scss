@@ -6,17 +6,26 @@
         fieldset {
             display: flex;
             margin-bottom: 40px;
+            flex-direction: column;
+
+            @include for-tablet-portrait-up {
+                flex-direction: row;
+            }
 
             .contact-form_field {
-                width: 50%;
-                padding-right: 30px;
+                width: 100%;
 
-                &:last-child {
-                    padding-right: 0;
+                @include for-tablet-portrait-up {
+                    width: 50%;
+                    padding-right: 30px;
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
                 }
 
-                @include for-tablet-landscape-up {
-                    width: 40%; 
+                @include for-desktop-up {
+                    width: 38.5%;
                 }
 
                 .input {
@@ -42,7 +51,7 @@
         &_field {
             width: 100%;
 
-            @include for-tablet-landscape-up {
+            @include for-desktop-up {
                 width: 77%;
             }
     
