@@ -2,8 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
+import {newObserver} from '../../Utils/utility'
 
 class BlogRoll extends React.Component {
+  componentDidMount() {
+    newObserver();
+  }
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
