@@ -62,3 +62,12 @@ p, a, label, li {
         padding: 0 120px 60px 0;
     }
 }
+
+.access-hidden {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
