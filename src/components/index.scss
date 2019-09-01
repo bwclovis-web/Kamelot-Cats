@@ -34,5 +34,20 @@
         margin-top: 20px;
         min-width: 180px;
         letter-spacing: 0.17rem;
+        color: $color-lagoon;
+        transition: all .1s ease-in-out;
+
+        &._sm {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-align: center;
+        }
+
+        &:hover {
+            box-shadow: $default-shadow;
+            background-color: $color-pacific;
+            color: $color-aqua;
+        }
     }
 }

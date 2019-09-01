@@ -7,12 +7,22 @@
     &-content {
         h2 {
             font-family: $font-heading;
-            font-size: 3.2rem;
+            font-size: 2.8rem;
+            line-height: 1.24;
+
+            @include for-tablet-landscape-up {
+                font-size: 3.2rem;
+                line-height: 1.5;
+            }
         }
     }
 
     &-taglist {
-        padding: 40px 60px;
+        padding: 40px 20px;
+
+        @include for-tablet-landscape-up {
+            padding: 40px 60px;
+        }
         
         &_list {
             display: flex;
@@ -64,11 +74,12 @@
         position: absolute;
         z-index: 4;
         background-color: rgba($color-black, 0.8);
-        padding: 20px 60px;
+        padding: 20px 20px;
         width: 100%;
         
         @include for-tablet-landscape-up {
             width: $default-width;
+            padding: 20px 60px;
         }
 
         & + div {
@@ -78,8 +89,13 @@
             ol,
             ol + p,
             ul,
+            blockquote,
             ul+ p {
-                padding: 10px 60px;
+                padding: 10px 20px;
+
+                @include for-tablet-landscape-up {
+                    padding: 10px 60px;
+                }
             }
 
             h2 {
@@ -104,7 +120,11 @@
     }
 
     .gatsby-resp-image-wrapper {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
         border-bottom: 1px solid $color-pacific;
+
+        @include for-tablet-landscape-up {
+            margin-bottom: 60px;
+        }
     }
 }

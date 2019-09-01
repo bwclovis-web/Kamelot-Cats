@@ -1,5 +1,5 @@
 .container {
-    padding: 40px;
+    padding: 40px 20px;
 
     @include for-tablet-landscape-up {
         padding: 120px 60px;

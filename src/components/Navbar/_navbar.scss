@@ -1,9 +1,10 @@
 .navbar {
    background-color: $color-aqua;
-   width: 100vw;
+   width: 100%;
    display: flex;
    justify-content: center;
    border-bottom: 5px solid $color-robins-egg;
+
 
    @include for-tablet-landscape-up {
         width: 40vw;
@@ -52,10 +53,18 @@
    &-anchor {
        font-family: $font-body;
        font-weight: 600;
-       font-size: 2rem;
-       padding: 10px 20px;
+       font-size: 1.6rem;
+       padding: 10px;
        text-transform: uppercase;
        letter-spacing: .1rem;
        color: $color-lagoon;
+
+       @include for-tablet-landscape-up {
+            font-size: 2rem;
+       }
+       
+       @include for-desktop-up {
+        padding: 10px 20px;
+       }
    }
 }
