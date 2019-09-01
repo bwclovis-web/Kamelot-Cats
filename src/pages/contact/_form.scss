@@ -28,21 +28,34 @@
                     width: 38.5%;
                 }
 
+                .label {
+                    position: absolute;
+                    transform: translateX(20px) translateY(10px);
+                    transition: all .2s ease-in-out;
+                }
+
                 .input {
                     width: 100%;
                     border-radius: $default-radius;
                     height: 50px;
                     font-size: 2rem;
-                    padding: 10px 20px;
+                    padding: 20px 10px 4px;
                     letter-spacing: 0.17rem;
                     background-color: transparent;
                     border: 1px solid $color-lagoon;
                     color: $color-aqua;
                     transition: background-color .2s ease-in-out;
 
-                    &:focus,
-                    ._dirty {
+                    &:focus {
                         background-color: rgba($color-aqua, 0.3);
+                        color: $color-cyprus;
+                    }
+                }
+
+                &._dirty {
+                    .label {
+                        font-size: 1.4rem;
+                        transform: translateX(10px) translateY(0px);
                     }
                 }
             }
@@ -50,6 +63,7 @@
 
         &_field {
             width: 100%;
+            position: relative;
 
             @include for-desktop-up {
                 width: 77%;
@@ -70,8 +84,7 @@
                 letter-spacing: 0.17rem;
                 font-family: $font-body;
 
-                &:focus,
-                ._dirty {
+                &:focus {
                     background-color: rgba($color-aqua, 0.3);
                 }
             }

@@ -15,7 +15,6 @@ const ContactTop = ({
   contentComponent,
 }) => {
   const PageContent = contentComponent || Content;
-  console.log(content)
   return (
     <React.Fragment>
       <div className="heading-container">
@@ -32,13 +31,26 @@ export default class Index extends React.Component {
     super(props)
     this.state = { isValidated: false }
   }
+
   
-  handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value })
+  handleChange = evt => {
+    const parent = evt.target.parentElement.parentElement;
+    this.setState({ [evt.target.name]: evt.target.value })
+    if(evt.target.value) {
+      parent.classList.add('_dirty');
+    }
   }
 
-  handleFocus = () => {
-    console.log('to implement')
+  handleFocus = (evt) => {
+    const parent = evt.target.parentElement.parentElement;
+    parent.classList.add('_dirty');
+  }
+
+  handleBlur = (evt) => {
+    const parent = evt.target.parentElement.parentElement;
+    if(!evt.target.value) {
+      parent.classList.remove('_dirty');
+    }
   }
 
   handleSubmit = e => {
@@ -97,6 +109,8 @@ export default class Index extends React.Component {
                         type={'text'}
                         name={'name'}
                         onChange={this.handleChange}
+                        onFocus= {(evt) => this.handleFocus(evt)}
+                        onBlur ={(evt) => this.handleBlur(evt)}
                         id={'name'}
                         required={true}
                       />
@@ -114,7 +128,8 @@ export default class Index extends React.Component {
                         onChange={this.handleChange}
                         id={'email'}
                         required={true}
-                        onFocus={this.handleFocus}
+                        onFocus= {(evt) => this.handleFocus(evt)}
+                        onBlur ={(evt) => this.handleBlur(evt)}
                       />
                     </div>
                   </div>
