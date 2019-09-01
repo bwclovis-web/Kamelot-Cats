@@ -54,6 +54,14 @@
 
         .post-meta {
             padding: 20px 12px;
+
+            .heading {
+                &:hover,
+                &:focus {
+                    color: $color-robins-egg;
+                    box-shadow: 0 4px 0px -2px $color-robins-egg;
+                }
+            }
         }
 
         .btn {

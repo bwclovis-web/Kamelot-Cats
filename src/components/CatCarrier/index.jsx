@@ -28,9 +28,7 @@ class CatCarrier extends React.Component {
                           <PreviewCompatibleImage
                             imageInfo={{
                               image: post.frontmatter.featuredimage,
-                              alt: `featured image thumbnail for post ${
-                                post.title
-                              }`,
+                              alt: '',
                             }}
                           />
                           <div className="post-meta">
@@ -53,8 +51,8 @@ class CatCarrier extends React.Component {
                   {post.excerpt}
                 </p>
                 <Link className="btn btn-std _sm" to={post.fields.slug}>
-                    Keep Reading
-                  </Link>
+                  Keep Reading <span className="access-hidden">about {post.frontmatter.title} </span>
+                </Link>
               </article>
           ))}
       </div>

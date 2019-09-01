@@ -12,7 +12,6 @@
         width: 59.1vw;
         flex-direction: row;
         justify-content: flex-start;
-        align-items: end;
     }
     
     img {
@@ -26,14 +25,16 @@
 
         @include for-tablet-landscape-up {
             padding: 0 20px;
+            width: 25%;
         }
 
         @include for-desktop-up {
-            padding: 0 40px;
+            padding: 0 20px;
         }
         
         a {
             color: $color-cyprus;
+            font-size: 1.4rem;
         }
 
         &.social {
@@ -43,6 +44,7 @@
 
             @include for-tablet-landscape-up {
                 justify-content: flex-end;
+                align-self: flex-end;
             }
 
             a {

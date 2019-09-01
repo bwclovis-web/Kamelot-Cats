@@ -99,38 +99,40 @@ export default class Index extends React.Component {
                   </label>
                 </div>
                 <fieldset>
-                  <div className="contact-form_field">
-                    <label className="label" htmlFor={'name'}>
-                      Your name
-                    </label>
-                    <div className="control">
-                      <input
-                        className="input"
-                        type={'text'}
-                        name={'name'}
-                        onChange={this.handleChange}
-                        onFocus= {(evt) => this.handleFocus(evt)}
-                        onBlur ={(evt) => this.handleBlur(evt)}
-                        id={'name'}
-                        required={true}
-                      />
+                  <div className="fieldset-wrapper">
+                    <div className="contact-form_field">
+                      <label className="label" htmlFor={'name'}>
+                        Your name
+                      </label>
+                      <div className="control">
+                        <input
+                          className="input"
+                          type={'text'}
+                          name={'name'}
+                          onChange={this.handleChange}
+                          onFocus= {(evt) => this.handleFocus(evt)}
+                          onBlur ={(evt) => this.handleBlur(evt)}
+                          id={'name'}
+                          required={true}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="contact-form_field">
-                    <label className="label" htmlFor={'email'}>
-                      Email
-                    </label>
-                    <div className="control">
-                      <input
-                        className="input"
-                        type={'email'}
-                        name={'email'}
-                        onChange={this.handleChange}
-                        id={'email'}
-                        required={true}
-                        onFocus= {(evt) => this.handleFocus(evt)}
-                        onBlur ={(evt) => this.handleBlur(evt)}
-                      />
+                    <div className="contact-form_field">
+                      <label className="label" htmlFor={'email'}>
+                        Email
+                      </label>
+                      <div className="control">
+                        <input
+                          className="input"
+                          type={'email'}
+                          name={'email'}
+                          onChange={this.handleChange}
+                          id={'email'}
+                          required={true}
+                          onFocus= {(evt) => this.handleFocus(evt)}
+                          onBlur ={(evt) => this.handleBlur(evt)}
+                        />
+                      </div>
                     </div>
                   </div>
                 </fieldset>
