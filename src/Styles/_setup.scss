@@ -8,7 +8,10 @@
     }
 
     main & {
-        padding-bottom: 0;
+
+        @include for-tablet-landscape-up{
+            padding-bottom: 0;
+        }
     }
 }
 
