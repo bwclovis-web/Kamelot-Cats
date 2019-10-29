@@ -1,9 +1,7 @@
 ---
 templateKey: index-page
 title: Welcome to Kamelot Cats!
-subheading: >-
-  This site is a work in progress so please bear with me while I get everything
-  sorted! :)
+subheading: Follow me on Instagram @kamelotcats!
 description: >-
   Hello world! My name is Amanda and I rescue kittens! I'm also going to school
   to be a cat trainer! I live in southern New Jersey but I've lived in other
