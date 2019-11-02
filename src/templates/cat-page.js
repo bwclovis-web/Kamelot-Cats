@@ -15,10 +15,10 @@ export const CatPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
   return (
-    <section className="blog">
+    <section className="container container-image">
 
       <div className="blog-content">
-        <div className="blog-header heading-container">
+        <div className="heading-container">
           <h1 className="heading heading-h1">
             {title}
           </h1>

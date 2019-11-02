@@ -17,7 +17,7 @@
     letter-spacing: .2rem;
 
     &-link {
-        color: $color-aqua;
+        color: $flamenco;
         padding-bottom: 4px;
 
         &:hover,
@@ -27,10 +27,10 @@
     }
 
     &-std {
-        background-color: $color-aqua;
+        background-color: $flamenco;
         padding: 10px 40px;
         font-size: 2rem;
-        padding: 10px 20px;
+        padding: 10px;
         margin-top: 20px;
         min-width: 180px;
         letter-spacing: 0.17rem;
@@ -47,7 +47,8 @@
         &:hover {
             box-shadow: $default-shadow;
             background-color: $color-pacific;
-            color: $color-aqua;
+            color: $flamenco;
+            transform: scale(1.05, 1.05);
         }
     }
 }

@@ -17,16 +17,16 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="blog">
+    <section className="container container-image">
       {helmet || ''}
       <div className="blog-content">
-        <div className="blog-header heading-container">
+        <div className="heading-container">
           <h1 className="heading heading-h1">
             {title}
           </h1>
           <p className="subheading-h2">{description}</p>
         </div>
-        <PostContent content={content} />
+        <PostContent content={content} className='blog-content-container' />
         {tags && tags.length ? (
           <div className="blog-taglist">
             <div className="heading-container">
