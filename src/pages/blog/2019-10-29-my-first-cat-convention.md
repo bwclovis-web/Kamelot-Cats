@@ -13,6 +13,8 @@ tags:
   - Community
   - Adoption
 ---
+![catsbury cat convention](/img/img_20191029_015240_652.jpg "catsbury cat convention")
+
 On Sunday I went to my first ever cat convention, Catsbury Park Cat Convention! I'll be honest, initially the only reason I wanted to go was because The Kitten Lady was going to be there, but what I found when I arrived was a whole community of cat advocates. Everyone I met was warm and welcoming. They were genuinely thrilled that I had joined the community. It was so encouraging to meet so many wonderful people who love and want to help cats and kittens as much as I do. 
 
 There were tons of vendor booths, every one of them selling something cute or tasty for you or your cats to raise money to save more cats and kittens. It was a cornucopia of wonderful cat goodies! I personally left with some kitten lady merch, a super comfy tee from the cat photographer, a zip down hoodie from homeward bound, delicious cat shaped chocolates, two bags of catnip, and a Toasty Cat bed which Lancelot claimed almost immediately. I also got my copy of Tiny but Mighty signed!
@@ -25,4 +27,4 @@ I mentioned meet and greets, and while they all looked awesome the one I had tic
 
 I went for The Kitten Lady but I also found my people. I found a whole community that welcomed me with open arms and I instantly felt like I belonged. If you are an advocate, shelter or rescue worker, foster parent, or you just really love cats I 100% recommended going to a cat convention. I will definitely be going to more of them!
 
-![](/img/img_20191029_015240_652.jpg)
+![]()
