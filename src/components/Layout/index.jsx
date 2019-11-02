@@ -7,13 +7,13 @@ import useSiteMetadata from '../SiteMetadata'
 import { withPrefix } from "gatsby"
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+  const { title, description, keywords } = useSiteMetadata()
   return (
     <div>
       <Helmet>
         <html lang="en" />
-        <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
 
         <link
           rel="apple-touch-icon"

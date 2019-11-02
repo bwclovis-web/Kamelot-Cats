@@ -4,6 +4,8 @@ import Layout from '../components/Layout'
 import {graphql} from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
 
+import Helmet from 'react-helmet'
+
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -18,6 +20,9 @@ const ContactTop = ({
   return (
     <React.Fragment>
       <div className="heading-container">
+      <Helmet>
+        <title>{`Kamelot Cats | Contact Me`}</title>
+      </Helmet>
         <h1 className="heading heading-h1">{title}</h1>
       </div>
         <div className="description">

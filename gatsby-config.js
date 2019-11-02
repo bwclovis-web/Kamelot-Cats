@@ -4,7 +4,9 @@ module.exports = {
   siteMetadata: {
     title: 'Kamelot Cats',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Kamelot Cats is a page dedicated to all things cats. Specializing in cat traing, we also talk about cat fostering and kitten care.',
+    keywords:
+      'cat training, cat care, kitten care, kitten fostering, cat rescue, kitten rescue'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

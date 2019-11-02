@@ -4,6 +4,8 @@ import {graphql} from 'gatsby'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 
+import Helmet from 'react-helmet'
+
 export const IndexPageTemplate = ({
   image,
   title,
@@ -12,6 +14,9 @@ export const IndexPageTemplate = ({
 }) => (
   <div className="container">
     <section>
+      <Helmet>
+        <title>{`Kamelot Cats | Welcome to Kamelot Cats`}</title>
+      </Helmet>
       <div className="heading-container">
         <h1 className="heading heading-h1">
           {title}

@@ -4,7 +4,7 @@ import { kebabCase } from 'lodash'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-
+import {Helmet} from 'react-helmet'
 
 export const CatPostTemplate = ({
   content,
@@ -15,32 +15,34 @@ export const CatPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
   return (
-    <section className="container container-image">
-
-      <div className="blog-content">
-        <div className="heading-container">
-          <h1 className="heading heading-h1">
-            {title}
-          </h1>
-          <p className="subheading-h2">{description}</p>
-        </div>
-        <PostContent content={content} />
-        {tags && tags.length ? (
-          <div className="blog-taglist">
-            <div className="heading-container">
-              <h2>Tags</h2>
-            </div>
-            <ul className="blog-taglist_list">
-              {tags.map(tag => (
-                <li key={tag + `tag`} className="blog-taglist_item">
-                  <Link to={`/tags/${kebabCase(tag)}/`} className="blog-taglist_tag">{tag}</Link>
-                </li>
-              ))}
-            </ul>
+      <section className="container container-image">
+      <Helmet>
+        <title>{`Kamelot Cats | Meet the cats - ${title}`}</title>
+      </Helmet>
+        <div className="blog-content">
+          <div className="heading-container">
+            <h1 className="heading heading-h1">
+              {title}
+            </h1>
+            <p className="subheading-h2">{description}</p>
           </div>
-        ) : null}
-      </div>
-    </section>
+          <PostContent content={content} />
+          {tags && tags.length ? (
+            <div className="blog-taglist">
+              <div className="heading-container">
+                <h2>Tags</h2>
+              </div>
+              <ul className="blog-taglist_list">
+                {tags.map(tag => (
+                  <li key={tag + `tag`} className="blog-taglist_item">
+                    <Link to={`/tags/${kebabCase(tag)}/`} className="blog-taglist_tag">{tag}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+        </div>
+      </section>
   )
 }
 
