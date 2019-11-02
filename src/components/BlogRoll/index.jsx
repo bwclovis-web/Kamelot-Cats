@@ -33,17 +33,17 @@ class BlogRoll extends React.Component {
                             }}
                           />
                           <div className="post-meta">
-                        <Link
-                          className="title heading heading-h3"
-                          to={post.fields.slug}
-                        >
-                          {post.frontmatter.title}
-                        </Link>
-                          <p className="subtitle">
-                            <span> &bull; </span>
-                            {post.frontmatter.date}
-                          </p>
-                      </div>
+                            <Link
+                              className="title heading heading-h3"
+                              to={post.fields.slug}
+                            >
+                              {post.frontmatter.title}
+                            </Link>
+                            <p className="subtitle">
+                              <span> &bull; </span>
+                              {post.frontmatter.date}
+                            </p>
+                        </div>
                       </div>
                     </React.Fragment>
                   ) : null} 
